@@ -1,0 +1,129 @@
+:root{
+    --text-primary:#f8f8f2;
+    --text-secondary:#ff5555;
+    --bg-primary:#44475a;
+    --bg-secondary:#6272a4;
+    --bg-darkmode:#282a36;
+}
+
+body{
+    font-family: sans-serif;
+    margin:0px;
+    transition:0.3s;
+    background-color:var(--bg-secondary);
+    color:var(--text-primary);
+}
+.darkMode{
+    font-family: sans-serif;
+    margin:0px;
+    transition:0.3s;
+    background-color:var(--bg-darkmode);
+    color:var(--bg-secondary);
+}
+
+#lightSwitch{
+    transition:0.3s;
+    border:4px solid var(--text-secondary);
+    background-color:var(--bg-secondary);
+    color:var(--text-primary);
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding:5px;
+    font-family: inherit;
+    font-weight:bold;
+    margin-top:10px;
+    cursor:pointer;
+}
+#onSwitch{
+    transition:0.3s;
+    border:4px solid var(--text-primary);
+    background-color:var(--bg-primary);
+    color:var(--text-secondary);
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding:5px;
+    font-family: inherit;
+    font-weight:bold;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+@keyframes fadeAndScale {
+    from{
+        opacity:0;
+        transform: scale3d(0.8, 0.8, 1);
+    }
+    to{
+        opacity:1;
+        transform: scale3d(1,1,1);
+    }
+}
+
+.options{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align:center;
+    animation: fadeAndScale 0.2s ease-in;
+	transform-origin: center bottom;
+}
+.options > div{
+    border:2px solid var(--bg-secondary);
+    height:700px;
+    width:25%;
+    margin-top:20px;
+    border-radius: 1%;
+    align-items: baseline;
+    transition:0.2s;
+    filter: blur(10%);
+    filter:grayscale(15%);
+}
+.options > div:hover{
+    transition:0.2s;
+    transform:scale(1.01);
+    filter:blur(none);
+    filter:grayscale(0%);
+}
+
+.pane1{
+    margin:auto;
+    margin-right:5px;
+    background-color:#bd93f9;
+    background-image:url('/Users/zachary.gopinath/Desktop/chessboardjs/designIdeas/images/flowers.jpeg');
+    
+}
+.pane2{
+    margin:auto;
+    margin-left:0px;
+    margin-right:0px;
+    background-color:#f1fa8c;
+    background-image:url('/Users/zachary.gopinath/Desktop/chessboardjs/designIdeas/images/flowers.jpeg');
+}
+.pane3{
+    margin:auto;
+    margin-left:5px;
+    background-color:#8be9fd;
+    background-image:url('/Users/zachary.gopinath/Desktop/chessboardjs/designIdeas/images/flowers.jpeg');
+}
+
+.fas{
+    position: absolute;
+    top:50px;
+    font-size:50px;
+    text-align:center;
+    transition:0.2s;
+    animation: fadeAndScale 0.2s ease-in;
+	transform-origin: center bottom;
+}
+#fas1{
+    color:#f1fa8c;
+}
+#fas2{
+    color:#8be9fd;
+}
+#fas3{
+    color:#bd93f9;
+}
